@@ -1,9 +1,11 @@
 version: "2"
 services:
   iptv:
-    image: lordpedal/lordstream
-    container_name: ACEStream
+    image: ditronics/mrstream
+    container_name: MrStream
     environment:
-      - TZ=Europe/Madrid
+      - TZ=Etc/UTC
+    volumes:
+      - ../opt:/opt
     network_mode: host
     restart: always
