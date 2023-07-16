@@ -1,10 +1,13 @@
 # Sistema Operativo
 FROM ubuntu:20.04
-LABEL maintainer "Lordpedal"
+LABEL maintainer "Ditronics"
 
 # Variables
 ENV TZ=Europe/Madrid
 ENV ACESTREAM_VERSION="3.1.74_ubuntu_18.04_x86_64"
+
+# config volume
+VOLUME /opt
 
 # Dependencias
 RUN apt-get update -y && \
