@@ -3,7 +3,7 @@ FROM ubuntu:20.04
 LABEL maintainer "Ditronics"
 
 # Variables
-ENV TZ=Europe/Madrid
+ENV TZ=Etc/UTC
 ENV ACESTREAM_VERSION="3.1.74_ubuntu_18.04_x86_64"
 
 # config volume
