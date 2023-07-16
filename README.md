@@ -1,14 +1,10 @@
-# Lordstream [(Dockerfile)](https://github.com/Lordpedal/Lordstream)
+# MRStream (Fork from LordPedal Lordstream)
+Based in **ACEstream** is a simple **streaming playback**, compatilbe with most video playback apps.
 
-Basado en **ACEstream** es un sencillo **reproductor de streaming**, compatible con los principales reproductores de video.
+# Dockerfile
+Only AMD64 over Ubuntu 20.04
 
-## Dockerfile
-
-La imagen esta creada sobre Ubuntu 20.04. Solo incluye soporte arquitecturas **AMD64**
-
-## Uso
-
-Compatible con los esquemas docker-compose v2.
+# Usage  docker compose.
 
 ```
 version: "2"
@@ -17,29 +13,23 @@ services:
     image: lordpedal/lordstream
     container_name: LordStream
     environment:
-      - TZ=Europe/Madrid
+      - TZ=Etc/UTC
+    volumes:
+      - ../opt:/opt
     network_mode: host
     restart: always
 ```
 
-## Parámetros
+# Enviromment
 
-Las imágenes de contenedor se configuran utilizando parámetros pasados en tiempo de ejecución (como los anteriores). 
-Estos parámetros están separados por dos puntos e indican ``<external>: <internal>`` respectivamente. 
+| ``TZ=Etc/UTC`` | Time Zone |
+| ``network_mode: host`` | Default network mode |
 
-| Parámetro | Función |
-| ------ | ------ |
-| ``TZ=Europe/Madrid`` | Zona horaria |
-| ``Modo Red: host`` | Habilitamos el uso de la red ``host`` en vez de una virtual para docker |
+# Volumes
+| '' ../opt:opt'' | To easy safe configurations on your system
 
-## Gestión Web
-
-Interfaces web
-
-http://localhost:8000/stat
+## To open the web interface
 
 http://localhost:6878/webui/app/password/server
 
-## [Overclock Server](https://lordpedal.github.io)
-
-#### ... la culminación de un fin es el comienzo de una realidad.
+## [https://github.com/ditronicos}
