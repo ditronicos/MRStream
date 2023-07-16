@@ -11,7 +11,7 @@ version: "2"
 services:
   iptv:
     image: ditronics/mrstream
-    container_name: LordStream
+    container_name: MrStream
     environment:
       - TZ=Etc/UTC
     volumes:
