@@ -10,7 +10,7 @@ Only AMD64 over Ubuntu 20.04
 version: "2"
 services:
   iptv:
-    image: lordpedal/lordstream
+    image: ditronics/mrstream
     container_name: LordStream
     environment:
       - TZ=Etc/UTC
